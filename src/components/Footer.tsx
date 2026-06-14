@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Linkedin, Facebook, Youtube, Dribbble } from "./icons";
+import { FileText, Shield, Scale, PhoneCall } from "lucide-react";
 
 const navLinks = [
   { name: "Start", href: "#hero" },
@@ -11,11 +11,11 @@ const navLinks = [
   { name: "Ablauf", href: "#how-it-works" },
 ];
 
-const socials = [
-  { name: "Linkedin", href: "#", icon: Linkedin },
-  { name: "Facebook", href: "#", icon: Facebook },
-  { name: "Youtube", href: "#", icon: Youtube },
-  { name: "Dribbble", href: "#", icon: Dribbble },
+const importantLinks = [
+  { name: "Impressum", href: "#", icon: FileText },
+  { name: "Datenschutz", href: "#", icon: Shield },
+  { name: "Rechtliches", href: "#", icon: Scale },
+  { name: "Notdienste", href: "#", icon: PhoneCall },
 ];
 
 export default function Footer() {
@@ -66,11 +66,11 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Socials */}
+          {/* Important Links */}
           <div>
-            <h4 className="font-semibold text-white/90 mb-5 text-[15px]">Social Media</h4>
+            <h4 className="font-semibold text-white/90 mb-5 text-[15px]">Wichtige Links</h4>
             <ul className="space-y-3.5">
-              {socials.map((s) => (
+              {importantLinks.map((s) => (
                 <li key={s.name}>
                   <Link href={s.href} className="flex items-center gap-2.5 text-white/65 hover:text-white transition-colors text-[15px] group">
                     <span className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
@@ -86,7 +86,17 @@ export default function Footer() {
 
         <div className="border-t border-white/15 mt-12 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-[13px] text-white/55">
           <p>Copyright@2026 Praxis am Park · Alle Rechte vorbehalten</p>
-          <p>Mit ♥ für bessere Gesundheit</p>
+          <p>
+            Mit ♥ für bessere Gesundheit сделанно{" "}
+            <a 
+              href="https://invertadigital.de" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-white text-white/80 underline underline-offset-2 transition-colors font-medium"
+            >
+              INVERTA DIGITAL
+            </a>
+          </p>
         </div>
       </div>
     </footer>
