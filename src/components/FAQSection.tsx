@@ -41,37 +41,38 @@ export default function FAQSection() {
         <div className="grid lg:grid-cols-12 gap-16">
           <div className="lg:col-span-5">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+              transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
               className="inline-flex items-center px-4 py-2 rounded-full bg-white border border-gray-200 mb-6"
             >
               <span className="text-sm font-medium text-[var(--color-dark)]">Häufige Fragen</span>
             </motion.div>
             <motion.h2
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
+              transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
               className="font-heading text-4xl md:text-5xl font-bold text-[var(--color-dark)] mb-6"
             >
               Alles, was Sie heute wissen müssen
             </motion.h2>
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
+              transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
               className="text-[var(--color-muted)] text-lg mb-10"
             >
               Finden Sie Antworten auf die häufigsten Fragen zu unserer Plattform und unseren Leistungen.
             </motion.p>
             
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
+              transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4"
             >
               <Link
@@ -103,7 +104,7 @@ export default function FAQSection() {
                 >
                   <button
                     onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
-                    className="w-full text-left py-6 flex justify-between items-center gap-4"
+                    className="w-full text-left py-6 flex justify-between items-center gap-4 cursor-pointer"
                   >
                     <span className="font-heading font-semibold text-lg md:text-xl text-[var(--color-dark)]">{faq.q}</span>
                     <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-colors ${openIdx === idx ? 'bg-[var(--color-primary)] text-white' : 'bg-gray-100 text-[var(--color-dark)]'}`}>

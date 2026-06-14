@@ -54,8 +54,9 @@ export default function HeroSection() {
             
             {/* Tag */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
               className="inline-flex rounded-full overflow-hidden bg-white/10 backdrop-blur-md border border-white/20 mb-8"
             >
               <div className="flex items-center gap-2 bg-white px-4 py-2 text-[var(--color-dark)]">
@@ -71,9 +72,9 @@ export default function HeroSection() {
             
             {/* Heading */}
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
+              transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
               className="font-heading text-5xl md:text-[64px] lg:text-[72px] leading-[1.05] font-bold text-white mb-6 max-w-xl"
             >
               Echte Ärzte,<br/>echte Fürsorge.
@@ -81,9 +82,9 @@ export default function HeroSection() {
             
             {/* Subheading */}
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
+              transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
               className="text-lg text-white/90 mb-10 max-w-md font-medium leading-relaxed"
             >
               Entdecken Sie erfahrene Ärzte, vergleichen Sie Fachgebiete und buchen Sie vertrauensvolle Termine ganz einfach online.
@@ -91,9 +92,9 @@ export default function HeroSection() {
             
             {/* Buttons */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
+              transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4"
             >
               <Link

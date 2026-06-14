@@ -20,9 +20,10 @@ export default function AboutSection() {
         {/* Header Section */}
         <div className="max-w-4xl mx-auto flex flex-col items-center text-center mb-16">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-100 bg-white shadow-sm mb-8"
           >
              <CrossIcon className="w-4 h-4 text-[var(--color-primary)]" />
@@ -30,10 +31,10 @@ export default function AboutSection() {
           </motion.div>
           
           <motion.h3
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
+            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
             className="font-heading text-[28px] md:text-4xl lg:text-[40px] leading-tight font-medium text-[var(--color-dark)] px-4"
           >
             Wir sind ein modernes Ärzteteam, das Sie mit vertrauenswürdigen Ärzten verbindet und hochwertige Versorgung einfach, klar und jederzeit zugänglich macht.
@@ -45,10 +46,10 @@ export default function AboutSection() {
           
           {/* Card 1: Image + Book a call overlay */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 150 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
+            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
             className="relative rounded-[32px] overflow-hidden group h-[400px] md:h-full p-6 flex flex-col justify-between"
             style={{ backgroundImage: "linear-gradient(150deg, #2a8fa8 0%, #1d6fae 50%, #0f3f6f 100%)" }}
           >
@@ -77,10 +78,10 @@ export default function AboutSection() {
 
           {/* Card 2: Tall Image */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 150 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
+            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
             className="relative rounded-[32px] overflow-hidden h-[400px] md:h-full"
           >
             <Image
@@ -93,10 +94,10 @@ export default function AboutSection() {
 
           {/* Card 3: Stat Card */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 150 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
+            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
             className="rounded-[32px] bg-[var(--color-background)] p-10 flex flex-col justify-between h-[400px] md:h-full border border-gray-100"
           >
              <div>

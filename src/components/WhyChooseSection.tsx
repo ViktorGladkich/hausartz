@@ -30,38 +30,36 @@ function DoctorVisual() {
     { name: "Dr. Sarah Mitchell", role: "Dermatologin", img: "/images/doctor-sarah.webp" },
     { name: "Dr. James Carter", role: "Kardiologe", img: "/images/doctor-james.webp" },
   ];
-  const [idx, setIdx] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => setIdx((prev) => (prev + 1) % docs.length), 3000);
-    return () => clearInterval(timer);
-  }, [docs.length]);
 
   return (
-    <div className="absolute bottom-5 left-5 right-5 bg-white/95 backdrop-blur rounded-[100px] p-1.5 flex items-center justify-between shadow-lg overflow-hidden">
-      <div className="relative flex-1 h-9 overflow-hidden">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={idx}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="absolute inset-0 flex items-center gap-2.5"
-          >
-            <div className="w-9 h-9 rounded-full overflow-hidden relative shrink-0">
-              <Image src={docs[idx].img} alt={docs[idx].name} fill className="object-cover" />
+    <div className="absolute inset-0 flex flex-col gap-3 p-5 justify-center overflow-hidden">
+      {docs.map((doc, i) => (
+        <motion.div
+          key={doc.name}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: [0, -4, 0] }}
+          transition={{ 
+            opacity: { delay: i * 0.2, duration: 0.5 },
+            y: { repeat: Infinity, duration: 4, delay: i * 0.8, ease: "easeInOut" }
+          }}
+          className={`bg-white/95 backdrop-blur rounded-[100px] p-1.5 flex items-center justify-between shadow-lg w-[90%] ${
+            i === 0 ? 'self-start' : i === 1 ? 'self-end' : 'self-center'
+          }`}
+        >
+          <div className="flex items-center gap-2.5 min-w-0">
+            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full overflow-hidden relative shrink-0">
+              <Image src={doc.img} alt={doc.name} fill className="object-cover" />
             </div>
             <div className="min-w-0 pr-2">
-              <p className="text-[13px] font-bold text-[var(--color-dark)] leading-tight truncate">{docs[idx].name}</p>
-              <p className="text-[11px] font-semibold text-gray-500 truncate">{docs[idx].role}</p>
+              <p className="text-[12px] sm:text-[13px] font-bold text-[var(--color-dark)] leading-tight truncate">{doc.name}</p>
+              <p className="text-[10px] sm:text-[11px] font-semibold text-gray-500 truncate">{doc.role}</p>
             </div>
-          </motion.div>
-        </AnimatePresence>
-      </div>
-      <span className="w-9 h-9 rounded-full bg-[var(--color-dark)] flex items-center justify-center shrink-0 z-10 relative">
-        <ArrowUpRight size={18} className="text-white" />
-      </span>
+          </div>
+          <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[var(--color-dark)] flex items-center justify-center shrink-0">
+            <ArrowUpRight size={14} className="text-white" />
+          </span>
+        </motion.div>
+      ))}
     </div>
   );
 }
@@ -193,19 +191,20 @@ export default function WhyChooseSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-200 mb-6"
           >
             <span className="w-2 h-2 rounded-full bg-[var(--color-primary)]" />
             <span className="text-sm font-semibold text-[var(--color-dark)]">Warum Praxis am Park?</span>
           </motion.div>
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
+            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
             className="font-heading text-4xl md:text-5xl lg:text-[52px] font-bold text-[var(--color-dark)] leading-[1.05] tracking-tight"
           >
             Warum Praxis am Park für<br className="hidden md:block" /> bessere Gesundheit
@@ -216,11 +215,12 @@ export default function WhyChooseSection() {
           {cards.map((card, idx) => (
             <motion.div
               key={card.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 150 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ boxShadow: "0 12px 50px rgb(0,0,0,0.08)" }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              className="bg-white rounded-[var(--radius-card)] overflow-hidden shadow-[0_8px_40px_rgb(0,0,0,0.04)] hover:shadow-[0_12px_50px_rgb(0,0,0,0.08)] transition-shadow flex flex-col"
+              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: (idx + 1) * 0.2 }}
+              className="bg-white rounded-[var(--radius-card)] overflow-hidden shadow-[0_8px_40px_rgb(0,0,0,0.04)] flex flex-col"
             >
               {/* Visual top */}
               <div className="h-56 p-6 relative flex items-end justify-center overflow-hidden" style={{ backgroundImage: TEAL }}>

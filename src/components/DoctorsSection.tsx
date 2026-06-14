@@ -69,9 +69,10 @@ export default function DoctorsSection() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
           <div className="max-w-2xl">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+              transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-200/70 shadow-sm mb-6"
             >
               <span className="w-2 h-2 rounded-full bg-[var(--color-primary)]" />
@@ -79,10 +80,10 @@ export default function DoctorsSection() {
             </motion.div>
 
             <motion.h2
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
+              transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
               className="font-heading text-4xl md:text-5xl lg:text-[56px] font-bold text-[var(--color-dark)] leading-[1.05] tracking-tight"
             >
               Engagierte Ärzte,<br className="hidden md:block" /> die sich Ihrer Gesundheit widmen

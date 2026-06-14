@@ -37,9 +37,10 @@ export default function HowItWorksSection() {
         {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto mb-20 flex flex-col items-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/20 backdrop-blur-md mb-6"
           >
              <span className="w-2 h-2 rounded-full bg-white" />
@@ -47,10 +48,10 @@ export default function HowItWorksSection() {
           </motion.div>
           
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
+            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
             className="font-heading text-4xl md:text-5xl lg:text-[56px] font-bold text-white leading-tight"
           >
 Ihr Weg zur Gesundheit in drei einfachen Schritten.

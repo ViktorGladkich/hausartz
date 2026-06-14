@@ -63,9 +63,10 @@ export default function ServicesSection() {
         {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto mb-16 flex flex-col items-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-100 bg-white shadow-sm mb-8"
           >
              <span className="w-2 h-2 rounded-full bg-[var(--color-primary)]" />
@@ -73,10 +74,10 @@ export default function ServicesSection() {
           </motion.div>
           
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
+            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
             className="font-heading text-4xl md:text-5xl lg:text-[56px] font-bold text-[var(--color-dark)] leading-tight"
           >
             Alle Ihre Gesundheits&shy;bedürfnisse an einem Ort.
@@ -88,11 +89,12 @@ export default function ServicesSection() {
           {services.map((service, idx) => (
             <motion.div
               key={service.num}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 150 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -4, boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)" }}
               viewport={{ once: true }}
-              transition={{ delay: (idx % 3) * 0.1 }}
-              className="bg-white rounded-[32px] p-8 flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group border border-gray-100/50"
+              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: (idx % 3) * 0.2 }}
+              className="bg-white rounded-[32px] p-8 flex flex-col group border border-gray-100/50"
             >
               {/* Top wrapper: Number + Icon */}
               <div className="flex items-center justify-between mb-8">
