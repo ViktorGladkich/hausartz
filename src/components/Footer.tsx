@@ -87,7 +87,7 @@ export default function Footer() {
         <div className="border-t border-white/15 mt-12 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-[13px] text-white/55">
           <p>Copyright@2026 Praxis am Park · Alle Rechte vorbehalten</p>
           <p>
-            Mit ♥ für bessere Gesundheit сделанно{" "}
+            Erstellt von{" "}
             <a 
               href="https://invertadigital.de" 
               target="_blank" 
