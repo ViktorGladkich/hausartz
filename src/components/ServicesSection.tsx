@@ -57,7 +57,7 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="py-24 bg-[var(--color-background)]">
+    <section id="services" className="py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Section */}
@@ -69,8 +69,8 @@ export default function ServicesSection() {
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-100 bg-white shadow-sm mb-8"
           >
-             <span className="w-2 h-2 rounded-full bg-[var(--color-primary)]" />
-            <span className="text-sm font-semibold text-[var(--color-dark)]">Unsere Leistungen</span>
+             <span className="w-2 h-2 rounded-full bg-primary" />
+            <span className="text-sm font-semibold text-dark">Unsere Leistungen</span>
           </motion.div>
           
           <motion.h2
@@ -78,7 +78,7 @@ export default function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-            className="font-heading text-4xl md:text-5xl lg:text-[56px] font-bold text-[var(--color-dark)] leading-tight"
+            className="font-heading text-4xl md:text-5xl lg:text-[56px] font-bold text-dark leading-tight"
           >
             Alle Ihre Gesundheits&shy;bedürfnisse an einem Ort.
           </motion.h2>
@@ -98,26 +98,26 @@ export default function ServicesSection() {
             >
               {/* Top wrapper: Number + Icon */}
               <div className="flex items-center justify-between mb-8">
-                <span className="text-lg font-bold text-[var(--color-dark)]">/{service.num}</span>
-                <div className="w-12 h-12 rounded-full bg-[var(--color-primary)] flex items-center justify-center shadow-sm">
+                <span className="text-lg font-bold text-dark">/{service.num}</span>
+                <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-sm">
                    <service.icon size={22} className="text-white" strokeWidth={2} />
                 </div>
               </div>
               
               {/* Text wrapper */}
               <div className="flex flex-col flex-1">
-                <h3 className="font-heading text-2xl font-bold text-[var(--color-dark)] mb-3 tracking-tight">{service.title}</h3>
-                <p className="text-[var(--color-muted)] font-medium mb-8 leading-relaxed">{service.desc}</p>
+                <h3 className="font-heading text-2xl font-bold text-dark mb-3 tracking-tight">{service.title}</h3>
+                <p className="text-muted font-medium mb-8 leading-relaxed">{service.desc}</p>
                 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-8 mt-auto">
                   {service.tags.map(tag => (
                     <div key={tag} className="flex items-center gap-2 px-4 py-2 bg-[#F5F5F5] rounded-full">
                       {/* Check Icon SVG */}
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-[var(--color-dark)]">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-dark">
                         <path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
-                      <span className="text-[13px] font-semibold text-[var(--color-dark)]">
+                      <span className="text-[13px] font-semibold text-dark">
                         {tag}
                       </span>
                     </div>

@@ -26,8 +26,8 @@ export default function AboutSection() {
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-100 bg-white shadow-sm mb-8"
           >
-             <CrossIcon className="w-4 h-4 text-[var(--color-primary)]" />
-            <span className="text-sm font-semibold text-[var(--color-dark)]">Über Praxis am Park</span>
+             <CrossIcon className="w-4 h-4 text-primary" />
+            <span className="text-sm font-semibold text-dark">Über Praxis am Park</span>
           </motion.div>
           
           <motion.h3
@@ -35,7 +35,7 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-            className="font-heading text-[28px] md:text-4xl lg:text-[40px] leading-tight font-medium text-[var(--color-dark)] px-4"
+            className="font-heading text-[28px] md:text-4xl lg:text-[40px] leading-tight font-medium text-dark px-4"
           >
             Wir sind ein modernes Ärzteteam, das Sie mit vertrauenswürdigen Ärzten verbindet und hochwertige Versorgung einfach, klar und jederzeit zugänglich macht.
           </motion.h3>
@@ -63,8 +63,8 @@ export default function AboutSection() {
 
             {/* Excellence in Care Badge */}
             <div className="relative z-10 bg-white/90 backdrop-blur-md rounded-full px-4 py-2 flex items-center gap-2 self-start shadow-sm border border-white/20">
-               <CrossIcon className="w-4 h-4 text-[var(--color-primary)]" />
-               <span className="font-semibold text-sm text-[var(--color-dark)]">Exzellente Versorgung</span>
+               <CrossIcon className="w-4 h-4 text-primary" />
+               <span className="font-semibold text-sm text-dark">Exzellente Versorgung</span>
             </div>
 
             {/* Book a call button overlay */}
@@ -98,57 +98,57 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
-            className="rounded-[32px] bg-[var(--color-background)] p-10 flex flex-col justify-between h-[400px] md:h-full border border-gray-100"
+            className="rounded-[32px] bg-background p-10 flex flex-col justify-between h-[400px] md:h-full border border-gray-100"
           >
              <div>
-               <h1 className="font-heading text-6xl md:text-[80px] font-bold text-[var(--color-dark)] tracking-tight leading-none">120+</h1>
-               <p className="text-[var(--color-muted)] font-medium text-base mt-2">Vertrauensvolle Ärzte</p>
+               <h1 className="font-heading text-6xl md:text-[80px] font-bold text-dark tracking-tight leading-none">120+</h1>
+               <p className="text-muted font-medium text-base mt-2">Vertrauensvolle Ärzte</p>
              </div>
 
              <div className="space-y-6 mt-12 md:mt-0">
                 {/* Rated */}
                 <div className="flex items-center gap-4">
-                  <span className="text-[var(--color-dark)] font-semibold text-[15px] w-14">Bewertet</span>
+                  <span className="text-dark font-semibold text-[15px] w-14">Bewertet</span>
                   <div className="flex-1 h-1.5 bg-gray-200 rounded-full overflow-hidden">
                     <motion.div 
                       initial={{ width: 0 }}
                       whileInView={{ width: "90%" }}
                       viewport={{ once: true }}
                       transition={{ duration: 1, delay: 0.5 }}
-                      className="h-full bg-[var(--color-primary)] rounded-full" 
+                      className="h-full bg-primary rounded-full" 
                     />
                   </div>
-                  <span className="text-[var(--color-dark)] font-bold text-[15px] w-10 text-right">90%</span>
+                  <span className="text-dark font-bold text-[15px] w-10 text-right">90%</span>
                 </div>
                 
                 {/* Cured */}
                 <div className="flex items-center gap-4">
-                  <span className="text-[var(--color-dark)] font-semibold text-[15px] w-14">Geheilt</span>
+                  <span className="text-dark font-semibold text-[15px] w-14">Geheilt</span>
                   <div className="flex-1 h-1.5 bg-gray-200 rounded-full overflow-hidden">
                     <motion.div 
                       initial={{ width: 0 }}
                       whileInView={{ width: "85%" }}
                       viewport={{ once: true }}
                       transition={{ duration: 1, delay: 0.6 }}
-                      className="h-full bg-[var(--color-primary)] rounded-full" 
+                      className="h-full bg-primary rounded-full" 
                     />
                   </div>
-                  <span className="text-[var(--color-dark)] font-bold text-[15px] w-10 text-right">85%</span>
+                  <span className="text-dark font-bold text-[15px] w-10 text-right">85%</span>
                 </div>
                 
                 {/* Active */}
                 <div className="flex items-center gap-4">
-                  <span className="text-[var(--color-dark)] font-semibold text-[15px] w-14">Aktiv</span>
+                  <span className="text-dark font-semibold text-[15px] w-14">Aktiv</span>
                   <div className="flex-1 h-1.5 bg-gray-200 rounded-full overflow-hidden">
                     <motion.div 
                       initial={{ width: 0 }}
                       whileInView={{ width: "75%" }}
                       viewport={{ once: true }}
                       transition={{ duration: 1, delay: 0.7 }}
-                      className="h-full bg-[var(--color-primary)] rounded-full" 
+                      className="h-full bg-primary rounded-full" 
                     />
                   </div>
-                  <span className="text-[var(--color-dark)] font-bold text-[15px] w-10 text-right">75%</span>
+                  <span className="text-dark font-bold text-[15px] w-10 text-right">75%</span>
                 </div>
              </div>
           </motion.div>

@@ -75,7 +75,7 @@ Ihr Weg zur Gesundheit in drei einfachen Schritten.
 
                  {/* Number wrapper pill */}
                  <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-white px-5 py-2 rounded-full shadow-xl">
-                   <span className="text-[14px] font-bold text-[var(--color-dark)] tracking-wide">{step.num}</span>
+                   <span className="text-[14px] font-bold text-dark tracking-wide">{step.num}</span>
                  </div>
               </div>
               

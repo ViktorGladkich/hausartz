@@ -13,7 +13,7 @@ const avatars = [
 
 export default function CTASection() {
   return (
-    <section className="py-24 bg-[var(--color-background)] px-4 sm:px-6 lg:px-8">
+    <section className="py-24 bg-background px-4 sm:px-6 lg:px-8">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -51,13 +51,13 @@ export default function CTASection() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="#services"
-              className="px-8 py-3.5 rounded-[var(--radius-pill)] bg-white text-[var(--color-dark)] font-semibold hover:bg-gray-100 transition-colors text-[15px]"
+              className="px-8 py-3.5 rounded-pill bg-white text-dark font-semibold hover:bg-gray-100 transition-colors text-[15px]"
             >
               Leistungen entdecken
             </Link>
             <Link
               href="#contact"
-              className="px-8 py-3.5 rounded-[var(--radius-pill)] bg-white/10 backdrop-blur-sm border border-white/30 text-white font-semibold hover:bg-white/20 transition-colors text-[15px]"
+              className="px-8 py-3.5 rounded-pill bg-white/10 backdrop-blur-sm border border-white/30 text-white font-semibold hover:bg-white/20 transition-colors text-[15px]"
             >
               Termin buchen
             </Link>

@@ -36,7 +36,7 @@ export default function FAQSection() {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   return (
-    <section className="py-24 bg-[var(--color-background)]">
+    <section className="py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-16">
           <div className="lg:col-span-5">
@@ -47,14 +47,14 @@ export default function FAQSection() {
               transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
               className="inline-flex items-center px-4 py-2 rounded-full bg-white border border-gray-200 mb-6"
             >
-              <span className="text-sm font-medium text-[var(--color-dark)]">Häufige Fragen</span>
+              <span className="text-sm font-medium text-dark">Häufige Fragen</span>
             </motion.div>
             <motion.h2
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-              className="font-heading text-4xl md:text-5xl font-bold text-[var(--color-dark)] mb-6"
+              className="font-heading text-4xl md:text-5xl font-bold text-dark mb-6"
             >
               Alles, was Sie heute wissen müssen
             </motion.h2>
@@ -63,7 +63,7 @@ export default function FAQSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-              className="text-[var(--color-muted)] text-lg mb-10"
+              className="text-muted text-lg mb-10"
             >
               Finden Sie Antworten auf die häufigsten Fragen zu unserer Plattform und unseren Leistungen.
             </motion.p>
@@ -77,14 +77,14 @@ export default function FAQSection() {
             >
               <Link
                 href="#doctors"
-                className="px-8 py-3.5 text-center rounded-[var(--radius-pill)] text-white font-semibold hover:opacity-90 transition-opacity shadow-md"
+                className="px-8 py-3.5 text-center rounded-pill text-white font-semibold hover:opacity-90 transition-opacity shadow-md"
                 style={{ backgroundImage: "linear-gradient(90deg, #2db9c9 0%, #1a5fff 100%)" }}
               >
                 Ärzte ansehen
               </Link>
               <Link
                 href="#contact"
-                className="px-8 py-3.5 text-center rounded-[var(--radius-pill)] bg-white border border-gray-200 text-[var(--color-dark)] font-semibold hover:bg-gray-50 transition-colors"
+                className="px-8 py-3.5 text-center rounded-pill bg-white border border-gray-200 text-dark font-semibold hover:bg-gray-50 transition-colors"
               >
                 Kontakt
               </Link>
@@ -106,8 +106,8 @@ export default function FAQSection() {
                     onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
                     className="w-full text-left py-6 flex justify-between items-center gap-4 cursor-pointer"
                   >
-                    <span className="font-heading font-semibold text-lg md:text-xl text-[var(--color-dark)]">{faq.q}</span>
-                    <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-colors ${openIdx === idx ? 'bg-[var(--color-primary)] text-white' : 'bg-gray-100 text-[var(--color-dark)]'}`}>
+                    <span className="font-heading font-semibold text-lg md:text-xl text-dark">{faq.q}</span>
+                    <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-colors ${openIdx === idx ? 'bg-primary text-white' : 'bg-gray-100 text-dark'}`}>
                       {openIdx === idx ? <Minus size={16} /> : <Plus size={16} />}
                     </div>
                   </button>
@@ -120,7 +120,7 @@ export default function FAQSection() {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                       >
-                        <div className="pb-6 pr-12 text-[var(--color-muted)] leading-relaxed">
+                        <div className="pb-6 pr-12 text-muted leading-relaxed">
                           {faq.a}
                         </div>
                       </motion.div>
@@ -134,7 +134,7 @@ export default function FAQSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="mt-8 rounded-[var(--radius-card)] p-7 flex items-center gap-4 text-white"
+              className="mt-8 rounded-card p-7 flex items-center gap-4 text-white"
               style={{ backgroundImage: "linear-gradient(120deg, #2a8fa8 0%, #1d6fae 55%, #144f9e 100%)" }}
             >
               <div className="w-12 h-12 rounded-full bg-white/15 flex items-center justify-center shrink-0">

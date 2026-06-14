@@ -42,10 +42,10 @@ export default function Navbar() {
         >
           {/* Logo */}
           <Link href="#" className="flex items-center gap-3 pl-2">
-            <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[var(--color-primary)] shadow-sm overflow-hidden relative">
+            <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary shadow-sm overflow-hidden relative">
               <Image src="/logo.png" alt="Praxis am Park Logo" fill className="object-cover" />
             </div>
-            <span className={`font-heading font-bold text-xl sm:text-2xl tracking-tight ${scrolled ? 'text-[var(--color-dark)]' : 'text-white'}`}>
+            <span className={`font-heading font-bold text-xl sm:text-2xl tracking-tight ${scrolled ? 'text-dark' : 'text-white'}`}>
               Praxis am Park
             </span>
           </Link>
@@ -59,7 +59,7 @@ export default function Navbar() {
                   href={link.href}
                   className={`font-medium text-[15px] transition-colors ${
                     scrolled 
-                      ? 'text-[var(--color-muted)] hover:text-[var(--color-primary)]' 
+                      ? 'text-muted hover:text-primary' 
                       : 'text-white/90 hover:text-white'
                   }`}
                 >
@@ -71,8 +71,8 @@ export default function Navbar() {
               href="#contact"
               className={`px-6 py-2.5 rounded-full font-semibold transition-colors ${
                 scrolled 
-                  ? 'bg-[var(--color-primary)] text-white hover:opacity-90' 
-                  : 'bg-white text-[var(--color-dark)] hover:bg-gray-50'
+                  ? 'bg-primary text-white hover:opacity-90' 
+                  : 'bg-white text-dark hover:bg-gray-50'
               }`}
             >
               Kontakt
@@ -83,7 +83,7 @@ export default function Navbar() {
           <div className="md:hidden flex items-center pr-1">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[var(--color-dark)] shadow-sm transition-transform active:scale-95"
+              className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-dark shadow-sm transition-transform active:scale-95"
             >
               {isOpen ? <X size={20} strokeWidth={2.5} /> : <Menu size={20} strokeWidth={2.5} />}
             </button>
@@ -96,7 +96,7 @@ export default function Navbar() {
         <div className="fixed inset-0 z-40 bg-white md:hidden pt-28 px-6 flex flex-col">
           <button 
             onClick={() => setIsOpen(false)}
-            className="absolute top-6 right-6 w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-[var(--color-dark)] shadow-sm transition-transform active:scale-95"
+            className="absolute top-6 right-6 w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-dark shadow-sm transition-transform active:scale-95"
           >
             <X size={20} strokeWidth={2.5} />
           </button>
@@ -106,7 +106,7 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="text-[var(--color-dark)] font-heading font-semibold text-2xl"
+                className="text-dark font-heading font-semibold text-2xl"
               >
                 {link.name}
               </Link>
@@ -114,7 +114,7 @@ export default function Navbar() {
             <Link
               href="#contact"
               onClick={() => setIsOpen(false)}
-              className="bg-[var(--color-primary)] text-white px-8 py-4 rounded-full font-semibold text-lg text-center hover:opacity-90 transition-opacity mt-6 inline-block"
+              className="bg-primary text-white px-8 py-4 rounded-full font-semibold text-lg text-center hover:opacity-90 transition-opacity mt-6 inline-block"
             >
               Termin vereinbaren
             </Link>

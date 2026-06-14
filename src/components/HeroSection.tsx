@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { Star, ChevronLeft, ChevronRight, ArrowUpRight } from "lucide-react";
@@ -43,7 +43,7 @@ export default function HeroSection() {
       {/* Background gradient */}
       <div className="absolute inset-0 z-0" style={{ backgroundImage: "linear-gradient(135deg, #2a8fa8 0%, #1d6fae 40%, #0f3f6f 100%)" }}>
         <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-white opacity-[0.07] rounded-full blur-3xl" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/25 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-r from-black/25 via-transparent to-transparent" />
       </div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
@@ -59,8 +59,8 @@ export default function HeroSection() {
               transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
               className="inline-flex rounded-full overflow-hidden bg-white/10 backdrop-blur-md border border-white/20 mb-8"
             >
-              <div className="flex items-center gap-2 bg-white px-4 py-2 text-[var(--color-dark)]">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="text-[var(--color-dark)]">
+              <div className="flex items-center gap-2 bg-white px-4 py-2 text-dark">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="text-dark">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4 11h-3v3h-2v-3H8v-2h3V8h2v3h3v2z" />
                 </svg>
                 <span className="font-bold text-[13px] tracking-wide">Rund um die Uhr</span>
@@ -99,13 +99,13 @@ export default function HeroSection() {
             >
               <Link
                 href="#doctors"
-                className="px-8 py-3.5 rounded-[var(--radius-pill)] bg-white text-[var(--color-dark)] font-semibold hover:bg-gray-50 transition-colors text-[15px]"
+                className="px-8 py-3.5 rounded-pill bg-white text-dark font-semibold hover:bg-gray-50 transition-colors text-[15px]"
               >
                 Ärzte ansehen
               </Link>
               <Link
                 href="/contact"
-                className="px-8 py-3.5 rounded-[var(--radius-pill)] bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold hover:bg-white/20 transition-colors text-[15px]"
+                className="px-8 py-3.5 rounded-pill bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold hover:bg-white/20 transition-colors text-[15px]"
               >
                 Termin buchen
               </Link>
@@ -132,8 +132,6 @@ export default function HeroSection() {
                 
                 const isCenter = offset === 0;
                 const isLeft = offset === -1;
-                const isRight = offset === 1;
-
                 return (
                   <motion.div
                     key={doc.name}
@@ -164,7 +162,7 @@ export default function HeroSection() {
                     />
                     
                     {/* Dark gradient mask at bottom */}
-                    <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/80 to-transparent" />
+                    <div className="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-black/80 to-transparent" />
 
                     {/* Top Rating Tag */}
                     <div className="absolute top-4 right-4 rounded-[100px] bg-[#1A3B5C] pl-2.5 pr-3.5 py-1.5 flex items-center gap-1.5 shadow-lg">
@@ -179,8 +177,8 @@ export default function HeroSection() {
                           <Image src={doc.image} alt={doc.name} fill className="object-cover" />
                         </div>
                         <div className="flex flex-col">
-                          <span className="font-heading font-bold text-[var(--color-dark)] text-[15px] leading-tight">{doc.name}</span>
-                          <span className="text-[var(--color-muted)] text-[13px] font-medium mt-0.5">{doc.specialty}</span>
+                          <span className="font-heading font-bold text-dark text-[15px] leading-tight">{doc.name}</span>
+                          <span className="text-muted text-[13px] font-medium mt-0.5">{doc.specialty}</span>
                         </div>
                       </div>
                       <Link 

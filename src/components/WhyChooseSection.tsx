@@ -51,11 +51,11 @@ function DoctorVisual() {
               <Image src={doc.img} alt={doc.name} fill className="object-cover" />
             </div>
             <div className="min-w-0 pr-2">
-              <p className="text-[12px] sm:text-[13px] font-bold text-[var(--color-dark)] leading-tight truncate">{doc.name}</p>
+              <p className="text-[12px] sm:text-[13px] font-bold text-dark leading-tight truncate">{doc.name}</p>
               <p className="text-[10px] sm:text-[11px] font-semibold text-gray-500 truncate">{doc.role}</p>
             </div>
           </div>
-          <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[var(--color-dark)] flex items-center justify-center shrink-0">
+          <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-dark flex items-center justify-center shrink-0">
             <ArrowUpRight size={14} className="text-white" />
           </span>
         </motion.div>
@@ -96,8 +96,8 @@ function ChatVisual() {
             transition={{ duration: 0.25 }}
             className={`absolute flex items-center text-[11px] sm:text-[12px] font-medium px-3 py-2 rounded-xl shadow-sm ${
               isDoc
-                ? 'bg-gray-50 text-[var(--color-dark)] left-0 rounded-bl-sm' 
-                : 'bg-[var(--color-primary)] text-white right-0 rounded-br-sm'
+                ? 'bg-gray-50 text-dark left-0 rounded-bl-sm' 
+                : 'bg-primary text-white right-0 rounded-br-sm'
             }`}
           >
             {msgs[idx]}
@@ -166,7 +166,7 @@ function ChecklistVisual() {
                    initial={{ opacity: 0, x: -10 }}
                    animate={{ opacity: 1, x: 0 }}
                    exit={{ opacity: 0 }}
-                   className="text-[11px] sm:text-[12px] font-medium text-[var(--color-dark)] absolute line-clamp-1"
+                   className="text-[11px] sm:text-[12px] font-medium text-dark absolute line-clamp-1"
                  >
                    {item}
                  </motion.span>
@@ -197,15 +197,15 @@ export default function WhyChooseSection() {
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-200 mb-6"
           >
-            <span className="w-2 h-2 rounded-full bg-[var(--color-primary)]" />
-            <span className="text-sm font-semibold text-[var(--color-dark)]">Warum Praxis am Park?</span>
+            <span className="w-2 h-2 rounded-full bg-primary" />
+            <span className="text-sm font-semibold text-dark">Warum Praxis am Park?</span>
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-            className="font-heading text-4xl md:text-5xl lg:text-[52px] font-bold text-[var(--color-dark)] leading-[1.05] tracking-tight"
+            className="font-heading text-4xl md:text-5xl lg:text-[52px] font-bold text-dark leading-[1.05] tracking-tight"
           >
             Warum Praxis am Park für<br className="hidden md:block" /> bessere Gesundheit
           </motion.h2>
@@ -220,7 +220,7 @@ export default function WhyChooseSection() {
               whileHover={{ boxShadow: "0 12px 50px rgb(0,0,0,0.08)" }}
               viewport={{ once: true }}
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: (idx + 1) * 0.2 }}
-              className="bg-white rounded-[var(--radius-card)] overflow-hidden shadow-[0_8px_40px_rgb(0,0,0,0.04)] flex flex-col"
+              className="bg-white rounded-card overflow-hidden shadow-[0_8px_40px_rgb(0,0,0,0.04)] flex flex-col"
             >
               {/* Visual top */}
               <div className="h-56 p-6 relative flex items-end justify-center overflow-hidden" style={{ backgroundImage: TEAL }}>
@@ -230,8 +230,8 @@ export default function WhyChooseSection() {
               </div>
 
               <div className="p-8">
-                <h3 className="font-heading font-bold text-2xl text-[var(--color-dark)] mb-3">{card.title}</h3>
-                <p className="text-[var(--color-muted)] leading-relaxed">{card.desc}</p>
+                <h3 className="font-heading font-bold text-2xl text-dark mb-3">{card.title}</h3>
+                <p className="text-muted leading-relaxed">{card.desc}</p>
               </div>
             </motion.div>
           ))}

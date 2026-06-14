@@ -20,7 +20,7 @@ const importantLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--color-background)] px-4 sm:px-6 lg:px-8 pb-8">
+    <footer className="bg-background px-4 sm:px-6 lg:px-8 pb-8">
       <div
         className="max-w-7xl mx-auto rounded-[32px] px-6 sm:px-12 py-14 text-white relative overflow-hidden"
         style={{ backgroundImage: "linear-gradient(135deg, #2a8fa8 0%, #1d6fae 45%, #0f3f6f 100%)" }}
@@ -29,7 +29,7 @@ export default function Footer() {
           {/* Brand + newsletter */}
           <div>
             <Link href="#hero" className="flex items-center gap-2 mb-5">
-              <div className="w-9 h-9 bg-white rounded-xl flex items-center justify-center text-[var(--color-primary)] overflow-hidden relative">
+              <div className="w-9 h-9 bg-white rounded-xl flex items-center justify-center text-primary overflow-hidden relative">
                 <Image src="/logo.png" alt="Praxis am Park Logo" fill className="object-cover" />
               </div>
               <span className="font-heading font-bold text-2xl text-white">Praxis am Park</span>
@@ -45,7 +45,7 @@ export default function Footer() {
               />
               <button
                 type="submit"
-                className="px-5 py-2.5 rounded-[100px] bg-white text-[var(--color-dark)] text-sm font-semibold hover:bg-gray-100 transition-colors shrink-0"
+                className="px-5 py-2.5 rounded-[100px] bg-white text-dark text-sm font-semibold hover:bg-gray-100 transition-colors shrink-0"
               >
                 Senden
               </button>

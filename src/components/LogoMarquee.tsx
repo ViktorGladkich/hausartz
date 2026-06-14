@@ -11,8 +11,8 @@ export default function LogoMarquee() {
   return (
     <div className="py-12 border-y border-gray-100 bg-white overflow-hidden flex whitespace-nowrap relative">
       {/* Optional fade edges */}
-      <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+      <div className="absolute left-0 top-0 bottom-0 w-24 bg-linear-to-r from-white to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-24 bg-linear-to-l from-white to-transparent z-10 pointer-events-none" />
       
       <motion.div
         animate={{ x: ["0%", "-50%"] }}
@@ -25,7 +25,7 @@ export default function LogoMarquee() {
       >
         {marqueeLogos.map((logo, idx) => (
           <div key={idx} className="flex items-center gap-2 text-gray-400 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all cursor-default">
-            <Activity size={24} strokeWidth={2.5} className="text-[var(--color-primary)]" />
+            <Activity size={24} strokeWidth={2.5} className="text-primary" />
             <span className="font-heading font-bold text-2xl tracking-wider uppercase">{logo}</span>
           </div>
         ))}

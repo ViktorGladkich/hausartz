@@ -17,38 +17,38 @@ const testimonials: Testimonial[] = [
     name: "Anna Schmidt",
     role: "Lehrerin",
     quote: "Die Terminvereinbarung ging unglaublich schnell. Das gesamte Praxisteam ist freundlich und der Arzt hat sich viel Zeit für mich genommen.",
-    image: "/images/doctor-sarah.webp",
+    image: "/images/patient_anna.png",
   },
   {
     name: "Michael Weber",
     role: "Ingenieur",
     quote: "Ich bin seit Jahren Patient in der Praxis am Park. Die Kombination aus moderner Ausstattung und persönlicher Betreuung ist wirklich herausragend.",
-    image: "/images/doctor-james.webp",
+    image: "/images/patient_michael.png",
     featured: true,
   },
   {
     name: "Laura Fischer",
     role: "Studentin",
     quote: "Endlich eine Hausarztpraxis, bei der man sich verstanden fühlt. Keine langen Wartezeiten und eine sehr ausführliche, kompetente Beratung.",
-    image: "/images/doctor-robert.webp",
+    image: "/images/patient_laura.png",
   },
   {
     name: "Julia Becker",
     role: "Apothekerin",
     quote: "Als Apothekerin weiß ich, wie wichtig gute Diagnostik ist. Ich vertraue den Ärzten hier voll und ganz und empfehle die Praxis regelmäßig weiter.",
-    image: "/images/doctor-sarah.webp",
+    image: "/images/patient_julia.png",
   },
   {
     name: "Sophie Wagner",
     role: "Zweifache Mutter",
     quote: "Ob für mich oder meine Familie – wir fühlen uns hier immer bestens aufgehoben. Ein tolles, einfühlsames Team, das sich wirklich kümmert!",
-    image: "/images/doctor-emily.webp",
+    image: "/images/patient_sophie.png",
   },
   {
     name: "Markus Hoffmann",
     role: "Unternehmer",
     quote: "Gerade als Selbstständiger habe ich wenig Zeit. Die Online-Terminbuchung und die kurzen Wartezeiten vor Ort sind für mich absolutes Gold wert.",
-    image: "/images/doctor-robert.webp",
+    image: "/images/patient_markus.png",
     featured: true,
   },
 ];
@@ -75,22 +75,22 @@ export default function TestimonialsSection() {
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-200 mb-6 shadow-sm"
           >
-            <span className="w-2 h-2 rounded-full bg-[var(--color-primary)]" />
-            <span className="text-sm font-semibold text-[var(--color-dark)]">Erfahrungsberichte</span>
+            <span className="w-2 h-2 rounded-full bg-primary" />
+            <span className="text-sm font-semibold text-dark">Erfahrungsberichte</span>
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-            className="font-heading text-4xl md:text-5xl lg:text-[52px] font-bold text-[var(--color-dark)] leading-[1.05] tracking-tight"
+            className="font-heading text-4xl md:text-5xl lg:text-[52px] font-bold text-dark leading-[1.05] tracking-tight"
           >
             Vertraut von tausenden<br className="hidden md:block" /> zufriedenen Patienten.
           </motion.h2>
         </div>
 
         {/* Masonry via CSS columns */}
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 [column-fill:_balance]">
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 [column-fill:balance]">
           {testimonials.map((t, idx) => (
             <motion.div
               key={idx}
@@ -101,7 +101,7 @@ export default function TestimonialsSection() {
               className="break-inside-avoid mb-6"
             >
               {t.featured ? (
-                <div className="relative rounded-[20px] overflow-hidden min-h-[420px] flex flex-col justify-end p-8 shadow-[0_8px_40px_rgb(0,0,0,0.08)]">
+                <div className="relative rounded-card overflow-hidden min-h-[420px] flex flex-col justify-end p-8 shadow-[0_8px_40px_rgb(0,0,0,0.08)]">
                   <Image src={t.image} alt={t.name} fill className="object-cover object-[50%_20%]" />
                   {/* Framer-style Blur Mask Overlay */}
                   <div 
@@ -131,7 +131,7 @@ export default function TestimonialsSection() {
                   </div>
                 </div>
               ) : (
-                <div className="bg-white border border-gray-100 rounded-[20px] p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col h-full">
+                <div className="bg-white border border-gray-100 rounded-card p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col h-full">
                   <Stars />
                   <p className="text-[#787878] text-[15px] sm:text-[16px] font-medium leading-[1.6] mb-8 flex-1">&ldquo;{t.quote}&rdquo;</p>
                   <div className="flex items-center justify-between">
@@ -145,7 +145,7 @@ export default function TestimonialsSection() {
                       </div>
                     </div>
                     <a href="#" className="w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-50 border border-transparent hover:border-gray-200 transition-all shrink-0 group">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-400 group-hover:text-[var(--color-dark)] transition-colors">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-400 group-hover:text-dark transition-colors">
                         <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
                       </svg>
                     </a>
